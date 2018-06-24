@@ -1,3 +1,113 @@
 @media all and (max-width: 480px) {}
 
-@media all and (max-width: 839px) {}
+@media all and (max-width: 949px) {
+    .trans-header {
+        display: none;
+    }
+    .fixed-header {
+        display: none;
+    }
+    .logo-home img {
+        display: none;
+    }
+    .mobile-img {
+        margin: 10px 0 0 12px;
+        height: 30px;
+        width: 125px;
+        float: left;
+    }
+    .nav-home-top-trans {
+        display: none;
+    }
+    .nav-home-top {
+        display: none;
+    }
+    .skew {
+        display: none;
+    }
+    .nav-home-skewed-trans {
+        display: none;
+    }
+    .nav-home-skewed {
+        display: none;
+    }
+    .mobile-nav li {
+        display: inline-block;
+        text-align: center;
+        color: white;
+        width: 90%;
+        background: grey;
+        height: 30px;
+    }
+    .mobile-nav li a {
+        margin: 3px 0 0;
+    }
+    .mobile-nav li:nth-child(odd) {
+        color: white;
+        width: 80%;
+        background: #444;
+        transform: skewX(-20deg);
+    }
+    .mobile-nav li a:nth-child(odd) {
+        display: block;
+        transform: skewX(20deg);
+    }
+    .mobile-nav li:nth-child(even) {
+        width: 83%;
+        color: white;
+        background: #grey;
+    }
+    .mobile-nav li a:nth-child(even) {
+        display: block;
+    }
+    nav>div {
+        width: 100%;
+        height: 50px;
+        background: #eee;
+    }
+    nav svg {
+        margin: 10px 20px 0 0;
+    }
+    nav svg:hover {
+        cursor: pointer;
+        fill: mediumseagreen;
+    }
+    .hide {
+        display: none;
+    }
+    .mobile-nav {
+        text-align: center;
+    }
+    body {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: 400;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .mobile {
+        padding: 30px;
+    }
+    .mobile ul {
+        float: right;
+    }
+    .mobile ul li {
+        display: inline-block;
+        float: left;
+    }
+    .mobile ul li:not(:first-child) {
+        margin-left: 25px;
+    }
+    .mobile ul li a {
+        display: inline-block;
+        outline: none;
+        color: #1f2227;
+        font-size: 16px;
+        text-decoration: none;
+        letter-spacing: 0.04em;
+    }
+    .mobile ul li a:hover {
+        color: #808080;
+        text-decoration: none;
+    }
+}

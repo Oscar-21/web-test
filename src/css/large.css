@@ -3,130 +3,15 @@
         padding: 0 30px 0 0;
     }
     .banner-hm {
-        background: url(https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg);
         background-position-x: 435px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        position: relative;
-        top: 125px;
     }
-    /* .banner-hm {
-    top: 78px;
-    background-position-x: 435px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 10px;
-} */
     .branding-home {
         height: 420px;
     }
-    .banner-txt-btm-hm span {
-        color: #f05525;
-        font-size: 45px;
-        font-weight: 700;
-        text-transform: uppercase;
-        line-height: 55px;
-    }
-    .branding-copy {
-        float: right;
-        margin-top: 15%;
-        padding-right: 90px;
-    }
-    .branding-home h2 {
-        font-size: 40px;
-        font-weight: 300;
-        font-style: italic;
-    }
-    .tagline-hm {
-        font-size: 40px;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-style: normal;
-    }
-    .call-to-action-hm {
-        font-size: 20px;
-        font-weight: 300;
-        font-style: italic;
-        width: 500px;
-    }
-    .row {
-        margin: 0 auto;
-        width: 100%;
-    }
-    .col-1-3 {
-        display: inline-block;
-        vertical-align: top;
-        width: 33.33%;
-    }
-    .teaser {
-        text-align: center;
-        margin: 0 auto;
-        padding-bottom: 150px;
-    }
-    .btn-hvr-hm {
-        color: #eee;
-        background: mediumseagreen;
-    }
-    .middle {
-        border-left: 1px solid gray;
-        border-right: 1px solid gray;
-    }
-    .btn-img-hm {
-        margin-top: 250px;
-        width: 75px;
-        height: 75px;
-    }
-    .middle img {
-        width: 105px;
-        height: 50px;
-    }
-    .middle h5 {
-        margin: 48px 0 0 0;
-    }
-    img+h5 {
-        font-size: 32px;
-        font-weight: bold;
-        margin: 32px 0 0 0;
-        text-transform: uppercase;
-    }
-    .bottom-ipsum-hm {
-        height: 300px;
-    }
-    .lorem-txt-hm {
-        float: left;
-        width: 60%;
-        font-style: italic;
-        color: #444;
-        padding-left: 60px;
-        padding-top: 60px;
-    }
-    .lorem-txt-hm h3 {
-        font-size: 40px;
-        font-weight: 300;
-    }
-    .lorem-txt-hm p {
-        font-size: 17px;
-        font-weight: 300;
-        margin: 30px 0 0 0;
-    }
-    .ipsum-txt-hm {
-        color: #eee;
-        float: right;
-        background: #5f5d5d;
-        width: 40%;
-        height: 100%;
-        text-align: center;
-    }
-    .ipsum-txt-hm>h3:first-child {
-        font-size: 36px;
-        font-style: italic;
-        font-weight: 300;
-        margin: 90px 0 0 0;
-    }
-    .ipsum-txt-hm>h3:nth-child(2) {
-        font-size: 36px;
-        font-weight: 800;
-        line-height: 24px;
-    }
+}
+
+.branding-copy {
+    float: right;
+    margin-top: 15%;
+    padding-right: 90px;
 }

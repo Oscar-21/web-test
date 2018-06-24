@@ -1,33 +1,18 @@
 import React, { Component } from 'react';
-import tools from './images/tools.png';
-import toolsWhite from './images/tools2.png';
-import logo from './images/logo_color.png';
-import key1 from './images/key1.png';
-import keysWhite from './images/key2.png';
-import icon1 from './images/icon1.png';
-import iconWhite from './images/iconWhite.png';
-import logoWhite from './images/logo_ko.png';
-import linkedin from './images/logo_linkedin.png';
-import './css/main.css';
-import './css/small.css';
-import './css/medium.css';
-import './css/large.css';
 import './css/extra-large.css';
+import './css/large.css';
+import './css/main.css';
+import './css/medium.css';
+import './css/small.css';
+import { icon, iconTrans, key, keysTrans, linkedin, logo, logoTrans, wrench, wrenchTrans } from './images';
 
 class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            toolsHover: false,
-            keysHover: false,
-            iconHover: false,
-            hideNav: false,
-            one: false,
-        };
-        this.hideRefUpper = null
-        this.hideRefLower = null;
-        this.showRefUpper = null;
-        this.showRefLower = null;
+    state = {
+        wrenchHover: false,
+        keysHover: false,
+        iconHover: false,
+        hideNav: false,
+        mobileNavOpen: false,
     };
 
     componentDidMount() {
@@ -35,8 +20,21 @@ class App extends Component {
         this.showHeader();
     };
 
+    /* hide navbar breakpoints */
+    hideRefUpper = null
+    hideRefLower = null;
+
     setHideRefUpper = ref => { this.hideRefUpper = ref };
     setHideRefLower = ref => { this.hideRefLower = ref };
+
+    /* show navbar breakpoints */
+    showRefUpper = null;
+    showRefLower = null;
+
+    /* lazyLoadImages */
+    // lazyLoadRef = null
+    // setLazyLoadRef = ref => { this.lazyLoadRef = ref };
+
     setShowRefUpper = ref => { this.showRefUpper = ref; };
     setShowRefLower = ref => { this.showRefLower = ref; };
 
@@ -49,6 +47,7 @@ class App extends Component {
         io.observe(this.hideRefUpper);
         io.observe(this.hideRefLower);
     };
+
     showHeader = () => {
         let io = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -58,12 +57,24 @@ class App extends Component {
         io.observe(this.showRefUpper);
         io.observe(this.showRefLower);
     };
+    // lazyLoadImages = () => {
+    //     let io = new IntersectionObserver(entries => {
+    //         entries.forEach(entry => {
+    //             if (entry.isIntersecting) {
+
+    //             }
+    //         });
+    //     });
+    //     io.observe(this.showRefUpper);
+    //     io.observe(this.showRefLower);
+    // };
     render() {
         const {
-            toolsHover,
+            wrenchHover,
             iconHover,
             keysHover,
             hideNav,
+            mobileNavOpen,
         } = this.state;
         return (
             <div id="App">
@@ -71,6 +82,7 @@ class App extends Component {
                     <div className="logo-home">
                         <img src={hideNav ? "" : logo} alt="" />
                     </div>
+                    {/* <nav> */}
                     <ul className={hideNav ? "nav-home-top-trans" : "nav-home-top skew"}>
                         <li> <a href="">Employer </a> </li>
                         <li> <a href=""> Member </a> </li>
@@ -83,6 +95,36 @@ class App extends Component {
                         <li> <a>OUR &nbsp; SOLUTIONS</a> </li>
                         <li> <a>CONTACT US</a>  </li>
                     </ul>
+                    {/* </nav> */}
+                    {/* <nav className="mobile">
+                        <div>
+                            <img className="mobile-img" src={logo} alt="" />
+                            <svg
+                                onClick={() => this.setState({ mobileNavOpen: !mobileNavOpen })}
+                                fill="currentColor"
+                                style={{
+                                    float: 'right',
+                                    display: 'inline-block',
+                                    verticalAlign: 'middle',
+                                }}
+                                height="32"
+                                width="32"
+                                viewBox="0 0 1536 1792"
+                            >
+                                <path d="M1536 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zM1536 832v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zM1536 320v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"></path>
+                            </svg>
+                        </div>
+                        <ul className={mobileNavOpen ? "mobile-nav" : "hide"}>
+                            <li> <a href="">Employer </a> </li>
+                            <li> <a href=""> Member </a> </li>
+                            <li> <a href=""> Broker </a> </li>
+                            <li> <a href=""> Provider </a> </li>
+                            <li> <a>Home</a> </li>
+                            <li> <a>About Us</a> </li>
+                            <li> <a>Our &nbsp; Solutions</a> </li>
+                            <li> <a>Contact Us</a>  </li>
+                        </ul>
+                    </nav> */}
                 </header>
 
 
@@ -132,12 +174,12 @@ class App extends Component {
                 <section className="row">
                     <div className="grid">
                         <section
-                            className={toolsHover ? "teaser col-1-3 btn-hvr-hm" : "teaser col-1-3"}
-                            onMouseEnter={() => { this.setState({ toolsHover: true }) }}
-                            onMouseLeave={() => { this.setState({ toolsHover: false }) }}
+                            className={wrenchHover ? "teaser col-1-3 btn-hvr-hm" : "teaser col-1-3"}
+                            onMouseEnter={() => { this.setState({ wrenchHover: true }) }}
+                            onMouseLeave={() => { this.setState({ wrenchHover: false }) }}
                         >
                             <img
-                                src={toolsHover ? toolsWhite : tools}
+                                src={wrenchHover ? wrenchTrans : wrench}
                                 alt="lorem"
                                 className="btn-img-hm"
                             />
@@ -150,20 +192,20 @@ class App extends Component {
                             onMouseLeave={() => { this.setState({ keysHover: false }) }}
                         >
                             <img
-                                src={keysHover ? keysWhite : key1}
+                                src={keysHover ? keysTrans : key}
                                 alt=""
                                 className="btn-img-hm"
                             />
                             <h5>elefiend</h5>
                         </section>
 
-                        <section //className="teaser col-1-3"
+                        <section
                             className={iconHover ? "teaser col-1-3 btn-hvr-hm" : "teaser col-1-3"}
                             onMouseEnter={() => { this.setState({ iconHover: true }) }}
                             onMouseLeave={() => { this.setState({ iconHover: false }) }}
                         >
                             <img
-                                src={iconHover ? iconWhite : icon1}
+                                src={iconHover ? iconTrans : icon}
                                 alt=""
                                 className="btn-img-hm"
                             />
@@ -229,23 +271,9 @@ class App extends Component {
                     }} />
                 </section>
                 <footer>
-                    <section
-                        style={{
-                            //   margin: '0 auto',
-                            textAlign: 'center',
-                            color: 'white',
-                            height: 100,
-                            textTransform: 'uppercase'
-                            //                            borderBottom: '8px solid #fff',
-                        }}
-                        className="footer-hm-top">
-                        <div
-                            style={{
-
-                            }}
-                            className="col-1-5">
-                            <h5 style={{
-                            }}>contact us</h5>
+                    <section className="footer-hm-top">
+                        <div className="col-1-5">
+                            <h5> contact us</h5>
                         </div>
 
                         <div className="col-1-5">
@@ -256,14 +284,9 @@ class App extends Component {
                             <h5>Lipsum.com</h5>
                         </div>
                     </section>
-                    <hr style={{
-                        color: 'white', background: 'white',
-                        height: 1.1,
-                        width: '70%',
-                        margin: '0 0 5% 15%',
-                    }} />
+                    <hr className="horizontal" />
                     <section className="footer-hm-btm">
-                        <img src={logoWhite} alt="logo" />
+                        <img src={logoTrans} alt="logo" />
                         <img src={linkedin} alt="logo" />
                     </section>
                 </footer>
