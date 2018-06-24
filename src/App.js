@@ -15,31 +15,69 @@ import './css/large.css';
 import './css/extra-large.css';
 
 class App extends Component {
-    state = {
-        toolsHover: false,
-        keysHover: false,
-        iconHover: false,
+    constructor() {
+        super();
+        this.state = {
+            toolsHover: false,
+            keysHover: false,
+            iconHover: false,
+            hideNav: false,
+            one: false,
+        };
+        this.hideRefUpper = null
+        this.hideRefLower = null;
+        this.showRefUpper = null;
+        this.showRefLower = null;
+    };
+
+    componentDidMount() {
+        this.hideHeader();
+        this.showHeader();
+    };
+
+    setHideRefUpper = ref => { this.hideRefUpper = ref };
+    setHideRefLower = ref => { this.hideRefLower = ref };
+    setShowRefUpper = ref => { this.showRefUpper = ref; };
+    setShowRefLower = ref => { this.showRefLower = ref; };
+
+    hideHeader = () => {
+        let io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if ((entry.isIntersecting)) this.setState({ hideNav: true });
+            });
+        });
+        io.observe(this.hideRefUpper);
+        io.observe(this.hideRefLower);
+    };
+    showHeader = () => {
+        let io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) this.setState({ hideNav: false })
+            });
+        });
+        io.observe(this.showRefUpper);
+        io.observe(this.showRefLower);
     };
     render() {
         const {
             toolsHover,
             iconHover,
             keysHover,
+            hideNav,
         } = this.state;
-
         return (
-            <div className="App">
-                <header>
+            <div id="App">
+                <header className={hideNav ? "trans-header" : "fixed-header"}>
                     <div className="logo-home">
-                        <img src={logo} alt="logo" />
+                        <img src={hideNav ? "" : logo} alt="" />
                     </div>
-                    <ul className="nav-home-top skew">
-                        <li> <a href="">Employer </a>                         </li>
+                    <ul className={hideNav ? "nav-home-top-trans" : "nav-home-top skew"}>
+                        <li> <a href="">Employer </a> </li>
                         <li> <a href=""> Member </a> </li>
                         <li> <a href=""> Broker </a> </li>
                         <li> <a href=""> Provider </a> </li>
                     </ul>
-                    <ul className="nav-home-skewed">
+                    <ul className={hideNav ? "nav-home-skewed-trans" : "nav-home-skewed"}   >
                         <li> <a>HOME</a> </li>
                         <li> <a>ABOUT US</a> </li>
                         <li> <a>OUR &nbsp; SOLUTIONS</a> </li>
@@ -67,7 +105,7 @@ class App extends Component {
                         <section className="banner-white-background-hm">
                             <h3 className="unskew banner-txt-btm-hm">
                                 Proin Malesuada Arcu <br />
-                                <span className="unskew">
+                                <span ref={this.setShowRefUpper} className="unskew">
                                     CONDIMENTUM
                                 </span>
                             </h3>
@@ -77,8 +115,8 @@ class App extends Component {
 
                 <section className="branding-home">
                     <section className="branding-copy">
-                        <h2>
-                            Mauris suscipit pharetra
+                        <h2 ref={this.setShowRefLower}>
+                            auris suscipit pharetra
                             <br />
                             <span className="tagline-hm">
                                 Cras,ELEIFEND & LIBERO
@@ -103,7 +141,7 @@ class App extends Component {
                                 alt="lorem"
                                 className="btn-img-hm"
                             />
-                            <h5>cras</h5>
+                            <h5 ref={this.setHideRefUpper}>cras</h5>
                         </section>
 
                         <section
@@ -119,7 +157,7 @@ class App extends Component {
                             <h5>elefiend</h5>
                         </section>
 
-                        <section className="teaser col-1-3"
+                        <section //className="teaser col-1-3"
                             className={iconHover ? "teaser col-1-3 btn-hvr-hm" : "teaser col-1-3"}
                             onMouseEnter={() => { this.setState({ iconHover: true }) }}
                             onMouseLeave={() => { this.setState({ iconHover: false }) }}
@@ -136,7 +174,7 @@ class App extends Component {
 
                 <section className="bottom-ipsum-hm">
                     <div className="lorem-txt-hm">
-                        <h3> Praesent metus </h3>
+                        <h3 ref={this.setHideRefLower}> Praesent metus </h3>
                         <p> Pellentesque faucibus fermentum tellus, ut vulputate sapien blandit et. <br /> Nullam posuere magna massa, sit amet maximus neque facilisis quis. Donec dictum, orci condimentum sollicitudin suscipit, dui ipsum posuere.</p>
                     </div>
 
