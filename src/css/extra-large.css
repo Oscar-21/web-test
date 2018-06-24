@@ -1,0 +1,28 @@
+@media (min-width: 1366px) {
+    .nav-home-skewed>li {
+        width: 25%;
+    }
+    .nav-home-skewed {
+        width: 50%;
+        margin: 0 0 0 45%;
+    }
+    .banner-hm {
+        background-position-x: 600px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .nav-home-skewed>li {
+        width: 25%;
+    }
+    .nav-home-skewed {
+        width: 40%;
+        margin: 0 0 0 40%;
+    }
+    .banner-hm {
+        background-position-x: 600px;
+    }
+    .nav-home-top {
+        margin-left: 37%;
+    }
+}

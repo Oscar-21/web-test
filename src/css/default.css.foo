@@ -1,0 +1,453 @@
+@import url('reset.css');
+@import url('fonts.css');
+@import url('icons.css');
+
+img {
+  max-width: 100%;
+}
+
+body {
+  width: 100%;
+  font-family: 'Aller-web', Arial, Sans-Serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.container {
+  padding-left: 8vw;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+
+ .group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+} 
+
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+
+/*
+  ========================================
+  Links
+  ========================================
+*/
+
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+
+.primary-header {
+  position:fixed ;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  margin: 0 auto;
+  height: 8rem; 
+  box-shadow: 1px 4px 20px rgba(0,0,0,0.55)
+}
+
+header img {
+  width: 16.8rem;
+  height: 2.5rem;
+  float: left; 
+  position: relative;
+  top: 3.75rem;
+  margin-left: 3rem;
+  /*padding-left: 200px;
+  margin-top: 70px;
+  width: 225px;*/
+}
+
+.boxStuff:hover {
+  background: MediumSeaGreen;
+}
+
+.header-home {
+  width: 98vw;
+}
+
+.topNav {
+  height: 90px;
+  width: 100%;
+  background: #FFFFFF;
+}
+
+.floatNav {
+  font-family: 'Aller';
+  font-weight: 500;;
+  height: 80px;
+  width: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  margin-top: -5S0px;
+  margin-right: -30px;
+  float: right;
+  transform: skewX(-20deg);
+}
+
+.navItems > div:nth-child(1) {
+}
+
+.floatNavTop {
+  font-family: Aller;
+  font-weight: lighter;;
+  font-size: 1em;
+  /*float: left;*/
+  color: #777777;
+  height: 80px;
+  width: 50%;
+  margin-top: -5S0px;
+  background: #FFFFFF;
+  margin-right: -30px;
+  position: absolute;
+  top: 10px;
+  left: 50vw;
+  transform: skewX(-20deg);
+}
+
+.picDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  background: #333333;
+  background: url('http://h4z.it/Image/fdc5b1_banner_home.jpg');
+  background-position-x: 900px;
+  background-position-y: -400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.left {
+  width: 65%;
+  height: 600px;
+  background: #dddddd;
+  transform: skewX(-20deg);
+  margin-left: -10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftText {
+  margin-left: 5%;
+  height: 550px;
+}
+
+.bottomText {
+  background: #FFFFFF;
+  height: 300px;
+  width: 100%;
+}
+
+.left2 {
+  width: 75%;
+  height: 400px;
+  background: #eeeeee;
+  transform: skewX(-20deg);
+  margin-left: -10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  width: 25%;
+  height: 400px;
+  background: #777777;
+  overflow: hidden;
+  transform: skewX(-20deg);
+}
+
+.navItems {
+  line-height: 80px;
+  list-style: none;
+  transform: skewX(20deg);
+  height: 100%;
+  box-sizing: border-box;
+  display: inline;
+}
+
+.navItems>div {
+  width: 25%;
+  float: left;
+  height: 100%;
+  text-align: center;
+
+}
+
+.navItems>div>li {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.navItems>div>li:hover {
+  box-sizing: border-box;
+  background: mediumseagreen;
+  width: 100%;
+  height: 100%;
+}
+
+.navItems>div>li:hover {
+  color: #eeeeee;
+  box-sizing: border-box;
+  background: mediumseagreen;
+  width: 100%;
+  height: 100%;
+}
+
+.navItems>div>li:hover>div {
+  transform: skewX(20deg);
+}
+
+.navItems>div>li>div {
+  transform: skewX(20deg);
+}
+
+.navItemsTop {
+  display: inline-block;
+  line-height: 80px;
+  list-style: none;
+  text-align: center;
+  transform: skewX(20deg);
+  height: 100%;
+  box-sizing: border-box;
+  margin-left: 4.5em;
+}
+
+.navItemsTop>div {
+  float: right;
+  padding: 0 75px 0 0;
+  width: 25%;
+  height: 100%;
+  transform: skewX(-20deg);
+  border-right: 1px solid grey;
+  text-align: center;
+}
+
+
+.navItemsTop>div>li {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0 0 0 12px;
+}
+
+.navItemsTop>div>li:hover {
+  box-sizing: border-box;
+  color: mediumseagreen;
+  width: 100%;
+  height: 100%;
+}
+
+.navItemsTop>div>li:hover {
+  color: #eeeeee;
+  box-sizing: border-box;
+  color: mediumseagreen;
+  width: 100%;
+  height: 100%;
+}
+
+.navItemsTop>div>li:hover>div {
+  transform: skewX(20deg);
+}
+
+.navItemsTop>div>li>div {
+  transform: skewX(20deg);
+}
+
+.cardText {
+  font-family: aller-light;
+  color: #eee;
+  font-size: 18px;
+  text-align: center;
+  padding: 90px;
+}
+
+.cardTextHide {
+  display: none;
+}
+
+.cardHeader {
+  justify-self: flex-start;
+  color: black;
+}
+
+.cardHeaderHover {
+  display: none;
+}
+
+.bottomNav {
+  height: 200px;
+  width: 100%;
+  background: #777777;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #eeeeee;
+  padding-top: 50px;
+}
+
+.footerBorder {
+  width: 40%;
+  border-bottom: 1px solid #eeeeee;
+  align-self: center;
+  margin-top: 20px
+}
+
+.light {
+  font-family: 'Aller-web', Fantasy;
+  font-weight: 300;
+}
+
+.primary-nav {
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: .03rem;
+  height: inherit;
+  text-transform: uppercase;
+  margin-right: 3.12rem;
+  height: 100%;
+  /* height: 400px; */
+}
+
+.skewed-list {
+  height: inherit;
+  transform: skew(-20deg)
+}
+
+.skewed-list a {
+  display:block;
+  transform: skew(20deg)
+}
+
+.secondary-nav .skewed-list a {
+  display:block;
+  transform: skew(35deg);
+}
+
+.secondary-nav .skewed-list li {
+  /* margin: 0 0 30px 0; */
+}
+
+.primary-nav li {
+  border-right: 1px solid grey;
+}
+
+.regular {
+  box-shadow: 1px 4px 20px rgba(0,0,0,0.55);
+  background: grey;
+}
+.secondary-nav ul {
+  text-align: center;
+  width: 700px;
+}
+
+div#foo {
+  border: none;
+}
+
+
+.secondary-nav {
+  position: fixed; 
+  transform: skew(-20deg);
+  top: 8rem;
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: .031px;
+  text-transform: uppercase;
+  box-shadow: 1px 4px 20px rgba(0,0,0,0.55);
+  margin-left: 50%;
+  height: 5rem;
+  margin-top: -3rem;
+  background: white;
+}
+
+
+/*
+  ========================================
+  Primary footer
+  ========================================
+*/
+
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+.nav {
+  text-align: right;
+}
+.primary-nav li {
+  display: inline-block;
+  margin: -10px 0 0 0;
+  vertical-align: top;
+  padding: 3.125rem 2rem 1.437rem 2rem;
+}
+
+.secondary-nav li {
+  display: inline-block;
+  margin: 0.625rem;
+  /* vertical-align: top; */
+  padding: 1.425rem 2.5rem 1.437rem .75rem;
+}
+.nav li:last-child {
+  margin-right: 0;
+}
+
+/*
+  ========================================
+ Hero 
+  ========================================
+*/
+.hero {
+  transform: skew(-45deg); 
+  height: 600px; 
+  background: blue;
+  position: relative;
+  top: 12rem;
+}
+/*
+  ========================================
+  Home
+  ========================================
+*/
