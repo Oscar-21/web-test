@@ -1,4 +1,4 @@
-@media all and (min-width: 840px) and (max-width: 1022px) {
+/* @media all and (min-width: 840px) and (max-width: 1022px) {
     .nav-home-skewed>li {
         float: left;
         width: 25%;
@@ -23,7 +23,6 @@
         position: relative;
         top: 3.75rem;
         width: 16.8rem;
-        /* height: 45px; */
     }
     .nav-home-top {
         background: #FFFFFF;
@@ -282,9 +281,9 @@
         margin: 0 auto;
         width: 100%;
     }
-}
+} */
 
-@media all and (min-width: 1023px) and (max-width: 1151px) {
+@media all and (min-width: 950px) and (max-width: 1151px) {
     header {
         position: fixed;
         top: 0;
@@ -582,6 +581,5 @@
     .footer-hm-btm {
         margin: 0 auto;
         width: 100%;
-        border: 1px solid red;
     }
 }
