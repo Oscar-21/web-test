@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import tools from './images/tools.png';
 import toolsWhite from './images/tools2.png';
+import logo from './images/logo_color.png';
 import key1 from './images/key1.png';
 import keysWhite from './images/key2.png';
 import icon1 from './images/icon1.png';
 import iconWhite from './images/iconWhite.png';
+import logoWhite from './images/logo_ko.png';
+import linkedin from './images/logo_linkedin.png';
 import './css/main.css';
 import './css/small.css';
 import './css/medium.css';
@@ -15,68 +19,20 @@ class App extends Component {
         toolsHover: false,
         keysHover: false,
         iconHover: false,
-        logo: false,
-        tools: false,
-    };
-    componentDidMount() {
-        this.check_webp_feature("lossy",
-            (feature, result) => {
-                if (result) {
-                    import('./images/logo_color.webp')
-                        .then(logo => {
-                            this.setState({ logo })
-                        });
-                    import('./images/tools.webp')
-                        .then(tools => {
-                            this.setState({ tools })
-                        })
-                } else {
-                    import('./images/logo_color.png')
-                        .then(tools => {
-                            this.setState({ tools })
-                        });
-                    import('./images/tools.png')
-                        .then(tools => {
-                            this.setState({ tools })
-                        })
-                }
-            });
-    };
-    check_webp_feature = (feature, callback) => {
-        const kTestImages = {
-            lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
-            lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
-            alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
-            animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
-        };
-        let img = new Image();
-        img.onload = function () {
-            const result = (img.width > 0) && (img.height > 0);
-            callback(feature, result);
-        };
-        img.onerror = function () {
-            callback(feature, false);
-        };
-        img.src = "data:image/webp;base64," + kTestImages[feature];
     };
     render() {
-
         const {
             toolsHover,
             iconHover,
             keysHover,
-            logo,
-            tools,
         } = this.state;
 
         return (
             <div className="App">
                 <header>
-                    {logo &&
-                        <div className="logo-home">
-                            <img src={logo} />
-                        </div>
-                    }
+                    <div className="logo-home">
+                        <img src={logo} alt="logo" />
+                    </div>
                     <ul className="nav-home-top skew">
                         <li> <a href="">Employer </a>                         </li>
                         <li> <a href=""> Member </a> </li>
@@ -235,36 +191,42 @@ class App extends Component {
                     }} />
                 </section>
                 <footer>
-                    <section className="footer-hm-top">
+                    <section
+                        style={{
+                            //   margin: '0 auto',
+                            textAlign: 'center',
+                            color: 'white',
+                            height: 100,
+                            textTransform: 'uppercase'
+                            //                            borderBottom: '8px solid #fff',
+                        }}
+                        className="footer-hm-top">
                         <div
                             style={{
 
                             }}
-                            className="col-1-3">
-                            <h5>contact us</h5>
+                            className="col-1-5">
+                            <h5 style={{
+                            }}>contact us</h5>
                         </div>
 
-                        <section className="col-1-3">
+                        <div className="col-1-5">
                             <h5>careers</h5>
-                        </section>
+                        </div>
 
-                        <section className="col-1-3">
+                        <div className="col-1-5">
                             <h5>Lipsum.com</h5>
-                        </section>
+                        </div>
                     </section>
-
+                    <hr style={{
+                        color: 'white', background: 'white',
+                        height: 1.1,
+                        width: '70%',
+                        margin: '0 0 5% 15%',
+                    }} />
                     <section className="footer-hm-btm">
-                        <section className="col-1-3">
-                            <h5>contact us</h5>
-                        </section>
-
-                        <section className="col-1-3">
-                            <h5>careers</h5>
-                        </section>
-
-                        <section className="col-1-3">
-                            <h5>Lipsum.com</h5>
-                        </section>
+                        <img src={logoWhite} alt="logo" />
+                        <img src={linkedin} alt="logo" />
                     </section>
                 </footer>
             </div>

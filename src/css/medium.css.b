@@ -288,7 +288,6 @@
     .footer-hm-top {
         margin: 0 auto;
         width: 100%;
-        border: 1px solid yellow;
     }
     .footer-hm-btm {
         margin: 0 auto;
@@ -601,7 +600,6 @@
     .footer-hm-top {
         margin: 0 auto;
         width: 100%;
-        border: 1px solid yellow;
     }
     .footer-hm-btm {
         margin: 0 auto;
