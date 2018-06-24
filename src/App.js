@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import logo from './images/logo_color.png';
-import tools from './images/tools.png';
 import toolsWhite from './images/tools2.png';
 import key1 from './images/key1.png';
 import keysWhite from './images/key2.png';
 import icon1 from './images/icon1.png';
 import iconWhite from './images/iconWhite.png';
-import paratablet from './images/para_tablet.jpg';
 import './css/main.css';
 import './css/small.css';
 import './css/medium.css';
@@ -18,21 +15,68 @@ class App extends Component {
         toolsHover: false,
         keysHover: false,
         iconHover: false,
+        logo: false,
+        tools: false,
+    };
+    componentDidMount() {
+        this.check_webp_feature("lossy",
+            (feature, result) => {
+                if (result) {
+                    import('./images/logo_color.webp')
+                        .then(logo => {
+                            this.setState({ logo })
+                        });
+                    import('./images/tools.webp')
+                        .then(tools => {
+                            this.setState({ tools })
+                        })
+                } else {
+                    import('./images/logo_color.png')
+                        .then(tools => {
+                            this.setState({ tools })
+                        });
+                    import('./images/tools.png')
+                        .then(tools => {
+                            this.setState({ tools })
+                        })
+                }
+            });
+    };
+    check_webp_feature = (feature, callback) => {
+        const kTestImages = {
+            lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
+            lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+            alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+            animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+        };
+        let img = new Image();
+        img.onload = function () {
+            const result = (img.width > 0) && (img.height > 0);
+            callback(feature, result);
+        };
+        img.onerror = function () {
+            callback(feature, false);
+        };
+        img.src = "data:image/webp;base64," + kTestImages[feature];
     };
     render() {
 
         const {
             toolsHover,
             iconHover,
-            keysHover
+            keysHover,
+            logo,
+            tools,
         } = this.state;
 
         return (
             <div className="App">
                 <header>
-                    <div className="logo-home">
-                        <img src={logo} />
-                    </div>
+                    {logo &&
+                        <div className="logo-home">
+                            <img src={logo} />
+                        </div>
+                    }
                     <ul className="nav-home-top skew">
                         <li> <a href="">Employer </a>                         </li>
                         <li> <a href=""> Member </a> </li>

@@ -1,4 +1,12 @@
-@media (min-width: 1366px) {
+@media all and (min-width: 1366px) {
+    .logo-home {
+        margin-left: 200px;
+    }
+    .banner-container-hm {
+        width: 55%;
+        margin-left: 10px;
+        /* margin-left: -5px; */
+    }
     .nav-home-skewed>li {
         width: 25%;
     }
@@ -11,18 +19,30 @@
     }
 }
 
-@media (min-width: 1600px) {
+@media all and (min-width: 1600px) {
     .nav-home-skewed>li {
         width: 25%;
     }
     .nav-home-skewed {
-        width: 40%;
-        margin: 0 0 0 40%;
+        width: 50%;
+        margin: 0 0 0 50%;
     }
     .banner-hm {
         background-position-x: 600px;
+        /* background-position-x: 400px; */
+        background-position-y: -10px;
     }
     .nav-home-top {
-        margin-left: 37%;
+        max-width: 829px;
+        width: 50%;
+        margin-left: 55%;
+    }
+    /* .nav-home-top li {
+        width: 25%;
+    } */
+    .branding-copy {
+        float: right;
+        margin-top: 10%;
+        padding-right: 300px;
     }
 }

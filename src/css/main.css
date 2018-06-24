@@ -4,6 +4,8 @@
 
 body {
     font-family: 'Aller-web', Arial, Sans-Serif;
+    /* max-width: 1600px; */
+    /* margin: 0 0 0 60px; */
 }
 
 img {
@@ -127,21 +129,21 @@ a {
     position: relative;
     top: 78px;
     width: 100%;
-    background: url(http://h4z.it/Image/fdc5b1_banner_home.jpg);
+    background: url(https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg);
     background-position-x: 435px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 10px;
 }
 
-.banner-container-hm {
+/* .banner-container-hm {
     width: 65%;
     height: 600px;
     margin-left: -10%;
     display: table;
     color: gray;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-}
+} */
 
 .banner-grey-background-hm {
     background: #dedada;
@@ -217,7 +219,7 @@ p.banner-pg-hm+h2 {
 .branding-home {
     color: #eee;
     height: 500px;
-    background: url("http://h4z.it/Image/dc0a91_ara_computer.jpg");
+    background: url("https://s3.us-east-2.amazonaws.com/suggestify/para_computer.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -225,11 +227,11 @@ p.banner-pg-hm+h2 {
     top: 80px;
 }
 
-.branding-copy {
+/* .branding-copy {
     float: right;
     margin-top: 21%;
     padding-right: 90px;
-}
+} */
 
 .branding-home h2 {
     font-size: 40px;
@@ -352,7 +354,7 @@ img+h5 {
 }
 
 .tablet-hm {
-    background: url(http://h4z.it/Image/978987_para_tablet.jpg);
+    background: url(https://s3.us-east-2.amazonaws.com/suggestify/para_tablet.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

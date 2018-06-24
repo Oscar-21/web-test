@@ -51,7 +51,7 @@ a {
         /* top: 80px; */
     }
     .banner-hm {
-        background: url(http://h4z.it/Image/fdc5b1_banner_home.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg);
         background-position-x: 450px;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -207,7 +207,7 @@ a {
     .branding-home {
         color: #eee;
         height: 500px;
-        background: url("http://h4z.it/Image/dc0a91_ara_computer.jpg");
+        background: url("https://s3.us-east-2.amazonaws.com/suggestify/para_computer.jpg");
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
@@ -318,7 +318,7 @@ a {
         font-weight: 800;
     }
     .tablet-hm {
-        background: url(http://h4z.it/Image/978987_para_tablet.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/para_tablet.jpg);
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -365,7 +365,7 @@ a {
         top: 80px;
     }
     .banner-hm {
-        background: url(http://h4z.it/Image/fdc5b1_banner_home.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg);
         background-position-x: 450px;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -520,7 +520,7 @@ a {
     .branding-home {
         color: #eee;
         height: 500px;
-        background: url("http://h4z.it/Image/dc0a91_ara_computer.jpg");
+        background: url("https://s3.us-east-2.amazonaws.com/suggestify/para_computer.jpg");
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
@@ -631,7 +631,7 @@ a {
         font-weight: 800;
     }
     .tablet-hm {
-        background: url(http://h4z.it/Image/978987_para_tablet.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/para_tablet.jpg);
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -663,7 +663,7 @@ a {
         width: 25%;
     }
     .banner-hm {
-        background: url(http://h4z.it/Image/fdc5b1_banner_home.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg);
         background-repeat: no-repeat;
         background-size: 100%;
         background-position-x: 600px;
@@ -724,7 +724,7 @@ a {
 }
 
 .banner-hm {
-    background: url(http://h4z.it/Image/fdc5b1_banner_home.jpg);
+    background: url(https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg);
     background-position-x: 435px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -904,7 +904,7 @@ p.banner-pg-hm+h2 {
 .branding-home {
     color: #eee;
     height: 500px;
-    background: url("http://h4z.it/Image/dc0a91_ara_computer.jpg");
+    background: url("https://s3.us-east-2.amazonaws.com/suggestify/para_computer.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1037,7 +1037,7 @@ img+h5 {
 }
 
 .tablet-hm {
-    background: url(http://h4z.it/Image/978987_para_tablet.jpg);
+    background: url(https://s3.us-east-2.amazonaws.com/suggestify/para_tablet.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

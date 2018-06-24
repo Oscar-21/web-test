@@ -8,9 +8,8 @@
         text-align: center;
     }
     .banner-hm {
-        background: url(http://h4z.it/Image/fdc5b1_banner_home.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg);
         background-position-x: 435px;
-        background-position-y: 10px;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -34,10 +33,8 @@
     }
     .branding-home {
         color: #eee;
-        position: relative;
-        top: 80px;
-        height: 500px;
-        background: url("http://h4z.it/Image/dc0a91_ara_computer.jpg");
+        height: 420px;
+        background: url("https://s3.us-east-2.amazonaws.com/suggestify/para_computer.jpg");
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
@@ -170,7 +167,7 @@
     }
     .branding-copy {
         float: right;
-        margin-top: 21%;
+        margin-top: 15%;
         padding-right: 90px;
     }
     .branding-home h2 {
@@ -274,7 +271,7 @@
         font-weight: 800;
     }
     .tablet-hm {
-        background: url(http://h4z.it/Image/978987_para_tablet.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/para_tablet.jpg);
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;

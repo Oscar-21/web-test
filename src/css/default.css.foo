@@ -149,7 +149,7 @@ header img {
   flex-direction: row;
   height: 600px;
   background: #333333;
-  background: url('http://h4z.it/Image/fdc5b1_banner_home.jpg');
+  background: url('https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg');
   background-position-x: 900px;
   background-position-y: -400px;
   background-repeat: no-repeat;

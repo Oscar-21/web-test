@@ -10,7 +10,7 @@
         /* top: 80px; */
     }
     .banner-hm {
-        background: url(http://h4z.it/Image/fdc5b1_banner_home.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg);
         background-position-x: 450px;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -166,7 +166,7 @@
     .branding-home {
         color: #eee;
         height: 500px;
-        background: url("http://h4z.it/Image/dc0a91_ara_computer.jpg");
+        background: url("https://s3.us-east-2.amazonaws.com/suggestify/para_computer.jpg");
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
@@ -277,7 +277,7 @@
         font-weight: 800;
     }
     .tablet-hm {
-        background: url(http://h4z.it/Image/978987_para_tablet.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/para_tablet.jpg);
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -324,7 +324,7 @@
         top: 80px;
     }
     .banner-hm {
-        background: url(http://h4z.it/Image/fdc5b1_banner_home.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg);
         background-position-x: 450px;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -479,7 +479,7 @@
     .branding-home {
         color: #eee;
         height: 500px;
-        background: url("http://h4z.it/Image/dc0a91_ara_computer.jpg");
+        background: url("https://s3.us-east-2.amazonaws.com/suggestify/para_computer.jpg");
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
@@ -590,7 +590,7 @@
         font-weight: 800;
     }
     .tablet-hm {
-        background: url(http://h4z.it/Image/978987_para_tablet.jpg);
+        background: url(https://s3.us-east-2.amazonaws.com/suggestify/para_tablet.jpg);
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
