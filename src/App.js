@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import './css/main.css';
+import './css/small.css';
 import './css/medium.css';
 import './css/large.css';
 import './css/extra-large.css';
-import { icon, iconTrans, key, keysTrans, linkedin, logo, logoTrans, wrench, wrenchTrans } from './images';
+import {
+    icon, iconTrans, key,
+    keysTrans, linkedin, logo,
+    logoTrans, wrench, wrenchTrans
+} from './images';
 
 class App extends Component {
     state = {
@@ -30,18 +35,13 @@ class App extends Component {
     showRefUpper = null;
     showRefLower = null;
 
-    /* lazyLoadImages */
-    // lazyLoadRef = null
-    // setLazyLoadRef = ref => { this.lazyLoadRef = ref };
-
     setShowRefUpper = ref => { this.showRefUpper = ref; };
     setShowRefLower = ref => { this.showRefLower = ref; };
 
     hideHeader = () => {
         let io = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if ((entry.isIntersecting)) this.setState({ hideNav: true });
-            });
+            for (const entry of entries)
+                if (entry.isIntersecting) this.setState({ hideNav: true })
         });
         io.observe(this.hideRefUpper);
         io.observe(this.hideRefLower);
@@ -49,9 +49,8 @@ class App extends Component {
 
     showHeader = () => {
         let io = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
+            for (const entry of entries)
                 if (entry.isIntersecting) this.setState({ hideNav: false })
-            });
         });
         io.observe(this.showRefUpper);
         io.observe(this.showRefLower);
@@ -62,11 +61,10 @@ class App extends Component {
             iconHover,
             keysHover,
             hideNav,
-            mobileNavOpen,
         } = this.state;
         return (
             <div id="App">
-                <header className={hideNav ? "trans-header" : "fixed-header"}>
+                <header ref={this.setRootRef} className={hideNav ? "trans-header" : "fixed-header"}>
                     <div className="logo-home">
                         <img src={hideNav ? "" : logo} alt="" />
                     </div>
