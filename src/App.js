@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './css/extra-large.css';
-import './css/large.css';
 import './css/main.css';
 import './css/medium.css';
-import './css/small.css';
+import './css/large.css';
+import './css/extra-large.css';
 import { icon, iconTrans, key, keysTrans, linkedin, logo, logoTrans, wrench, wrenchTrans } from './images';
 
 class App extends Component {
@@ -57,17 +56,6 @@ class App extends Component {
         io.observe(this.showRefUpper);
         io.observe(this.showRefLower);
     };
-    // lazyLoadImages = () => {
-    //     let io = new IntersectionObserver(entries => {
-    //         entries.forEach(entry => {
-    //             if (entry.isIntersecting) {
-
-    //             }
-    //         });
-    //     });
-    //     io.observe(this.showRefUpper);
-    //     io.observe(this.showRefLower);
-    // };
     render() {
         const {
             wrenchHover,
@@ -82,49 +70,20 @@ class App extends Component {
                     <div className="logo-home">
                         <img src={hideNav ? "" : logo} alt="" />
                     </div>
-                    {/* <nav> */}
-                    <ul className={hideNav ? "nav-home-top-trans" : "nav-home-top skew"}>
-                        <li> <a href="">Employer </a> </li>
-                        <li> <a href=""> Member </a> </li>
-                        <li> <a href=""> Broker </a> </li>
-                        <li> <a href=""> Provider </a> </li>
-                    </ul>
-                    <ul className={hideNav ? "nav-home-skewed-trans" : "nav-home-skewed"}   >
-                        <li> <a>HOME</a> </li>
-                        <li> <a>ABOUT US</a> </li>
-                        <li> <a>OUR &nbsp; SOLUTIONS</a> </li>
-                        <li> <a>CONTACT US</a>  </li>
-                    </ul>
-                    {/* </nav> */}
-                    {/* <nav className="mobile">
-                        <div>
-                            <img className="mobile-img" src={logo} alt="" />
-                            <svg
-                                onClick={() => this.setState({ mobileNavOpen: !mobileNavOpen })}
-                                fill="currentColor"
-                                style={{
-                                    float: 'right',
-                                    display: 'inline-block',
-                                    verticalAlign: 'middle',
-                                }}
-                                height="32"
-                                width="32"
-                                viewBox="0 0 1536 1792"
-                            >
-                                <path d="M1536 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zM1536 832v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zM1536 320v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"></path>
-                            </svg>
-                        </div>
-                        <ul className={mobileNavOpen ? "mobile-nav" : "hide"}>
+                    <nav>
+                        <ul className={hideNav ? "nav-home-top-trans" : "nav-home-top skew"}>
                             <li> <a href="">Employer </a> </li>
                             <li> <a href=""> Member </a> </li>
                             <li> <a href=""> Broker </a> </li>
                             <li> <a href=""> Provider </a> </li>
-                            <li> <a>Home</a> </li>
-                            <li> <a>About Us</a> </li>
-                            <li> <a>Our &nbsp; Solutions</a> </li>
-                            <li> <a>Contact Us</a>  </li>
                         </ul>
-                    </nav> */}
+                        <ul className={hideNav ? "nav-home-skewed-trans" : "nav-home-skewed"}   >
+                            <li> <a>HOME</a> </li>
+                            <li> <a>ABOUT US</a> </li>
+                            <li> <a>OUR &nbsp; SOLUTIONS</a> </li>
+                            <li> <a>CONTACT US</a>  </li>
+                        </ul>
+                    </nav>
                 </header>
 
 
@@ -233,42 +192,12 @@ class App extends Component {
                     </div>
                 </section>
 
-                <section className="tablet-hm" style={{
-                    height: 300,
-                    width: '100%',
-                    //                    margin: '0 auto',
-                }}>
-                    <div style={{
-                        display: 'inline-block',
-                        width: '12%',
-                        height: '100%',
-                    }} />
-                    <p
-                        style={{
-                            color: 'white',
-                            display: 'inline-block',
-                            width: '70%',
-                            position: 'relative',
-                            bottom: 120,
-                            marginLeft: 60,
-                            fontStyle: 'italic',
-                            fontWeight: 800,
-                            // textAlign: 'center',
-                            fontSize: 24,
-                            lineHeight: 1.3,
-                            // width: '40%',
-                            ///   paddingBottom: 100
-                        }}
-                    >
+                <section className="tablet-hm">
+                    <div className="buffer" />
+                    <p className="tablet-hm-cpy">
                         Fusce laoreet ullamcorper lacus, ut condimentum risus egestas quis. Proin aliquet sapien interdum feugiat facilisis. Cras commodo sapien in arcu.
-
                     </p>
-                    <div style={{
-                        display: 'inline-block',
-                        width: '12%',
-                        height: '100%',
-                        float: 'right',
-                    }} />
+                    <div className="bufferRight" />
                 </section>
                 <footer>
                     <section className="footer-hm-top">

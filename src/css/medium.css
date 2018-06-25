@@ -1,10 +1,4 @@
 @media all and (min-width: 950px) {
-    .mobile-nav,
-    .mobile-ing,
-    .mobile,
-    svg {
-        display: none;
-    }
     .fixed-header {
         position: fixed;
         top: 0;
@@ -95,12 +89,14 @@
         background-repeat: no-repeat;
     }
     .banner-hm {
-        top: 145px;
+        top: 120px;
         background: url(https://s3.us-east-2.amazonaws.com/suggestify/banner_home.jpg);
-        background-position-x: 450px;
+        background-position-x: 455px;
+        background-position-y: 10px;
         background-repeat: no-repeat;
         background-size: 100%;
         width: 100%;
+        position: relative;
     }
     .logo-home img {
         top: 3.75rem;
@@ -147,6 +143,8 @@
         display: table;
         color: gray;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+        /* position: relative; */
+        /* top: 130px; */
     }
     .banner-grey-background-hm {
         background: #bdbdbd;
@@ -320,12 +318,36 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
+        height: 300px;
+        width: 100%;
+    }
+    .buffer {
+        display: inline-block;
+        width: 12%;
+        height: 100%;
+    }
+    .bufferRight {
+        display: inline-block;
+        width: 12%;
+        height: 100%;
+        float: right;
+    }
+    .tablet-hm-cpy {
+        color: white;
+        display: inline-block;
+        width: 70%;
+        height: 200px;
+        position: relative;
+        bottom: 120px;
+        margin-left: 60px;
+        font-style: italic;
+        font-weight: 800;
+        font-size: 24px;
     }
     footer {
         background: #5f5d5d;
     }
     .horizontal {
-        /* color: red; */
         background: white;
         height: 1.1px;
         width: 70%;

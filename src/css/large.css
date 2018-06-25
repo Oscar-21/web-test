@@ -3,15 +3,15 @@
         padding: 0 30px 0 0;
     }
     .banner-hm {
-        background-position-x: 435px;
+        background-position-x: 455px;
+        background-position-y: 10px;
     }
     .branding-home {
         height: 420px;
     }
-}
-
-.branding-copy {
-    float: right;
-    margin-top: 15%;
-    padding-right: 90px;
+    .branding-copy {
+        float: right;
+        margin-top: 15%;
+        padding-right: 90px;
+    }
 }

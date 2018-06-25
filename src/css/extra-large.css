@@ -1,6 +1,6 @@
 @media all and (min-width: 1366px) {
     .logo-home {
-        margin-left: 200px;
+        margin-left: 100px;
     }
     .banner-container-hm {
         width: 55%;
@@ -37,9 +37,6 @@
         width: 50%;
         margin-left: 55%;
     }
-    /* .nav-home-top li {
-        width: 25%;
-    } */
     .branding-copy {
         float: right;
         margin-top: 10%;
